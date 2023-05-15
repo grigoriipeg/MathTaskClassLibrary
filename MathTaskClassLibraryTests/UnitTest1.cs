@@ -12,7 +12,7 @@ namespace MathTaskClassLibraryTests
         {
             int a = 3;
             int b = 5;
-            int expected = 15;
+            int expected = a * b;
 
             Geometry g = new Geometry();
             int actual = g.RectangleArea(a, b);
@@ -26,7 +26,7 @@ namespace MathTaskClassLibraryTests
             double pi = 3.14;
             int r = 10;
             int h = 4;
-            int expected = 1256;
+            double expected = (pi * Math.Pow(r, 2) * h);
 
             Geometry g = new Geometry();
             double actual = g.CylinderVolume(pi, r, h);
@@ -38,7 +38,7 @@ namespace MathTaskClassLibraryTests
         public void SquareRootReturned()
         {
             double x = 100;
-            int expected = 10;
+            double expected = Math.Sqrt(x);
 
             Geometry g = new Geometry();
             double actual = g.SquareRoot(x);
@@ -62,11 +62,11 @@ namespace MathTaskClassLibraryTests
         [TestMethod]
         public void SquareOfNumbersReturned()
         {
-            double x = 100;
-            int expected = 10;
+            int x = 100;
+            int expected = 91;
 
             Geometry g = new Geometry();
-            double actual = g.SquareRoot(x);
+            double actual = g.SquareOfNumbers(x);
 
             Assert.AreEqual(expected, actual);
         }

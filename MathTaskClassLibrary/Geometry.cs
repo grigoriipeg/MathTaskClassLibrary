@@ -43,25 +43,15 @@ namespace MathTaskClassLibrary
             return null;
         }
 
-        public double SquareOfNumbers()
+        public int SquareOfNumbers(int x)
         {
-            int n;
-            Console.WriteLine("Введите число:");
-            n = Convert.ToInt32(Console.ReadLine());
-
             int sum = 0;
+            int i = 0;
 
-            for (int i = 1; i <= n; i++)
+            while (sum + i * i < x)
             {
-                sum += i * i;
-                if (sum > n)
-                {
-                    break;
-                }
-                Console.WriteLine(sum);
-
+                sum += i * i++;
             }
-            Console.ReadKey();
             return sum;
         }
 
